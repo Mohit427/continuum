@@ -5,7 +5,7 @@
 HealthTech track, IIITDM Kancheepuram 24-hour Web Hackathon: *"Lost in Transit: fragmented medical records."*
 
 - **Live app:** https://continuum-steel.vercel.app
-- **Demo video:** [`demo/continuum-demo.mp4`](demo/continuum-demo.mp4)
+- **Demo video:** https://drive.google.com/file/d/19xu9k4jcrx38-clJT-fDmU7R2ykPLmWz/view?usp=sharing
 - **Try it without signing up:** the home page has one-click demo logins for a patient (Lakshmi, 62), a cardiologist (Dr. Iyer) and a lab (CityCare). All data is synthetic.
 
 ---
