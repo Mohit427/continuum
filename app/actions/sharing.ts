@@ -1,4 +1,5 @@
 "use server";
+import { appUrl } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { getSession } from "@/lib/auth";
@@ -109,7 +110,7 @@ export async function createLink(input: { label: string; purpose: string; catego
     expires_at: new Date(Date.now() + input.hours * 3_600_000).toISOString(),
   });
   revalidatePath("/patient/sharing");
-  return { url: `${process.env.NEXT_PUBLIC_APP_URL ?? ""}/s/${token}` };
+  return { url: `${appUrl()}/s/${token}` };
 }
 
 /** Rotate the emergency card token (old printed cards stop working). */

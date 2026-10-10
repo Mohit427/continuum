@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     serverActions: { bodySizeLimit: "2mb" },
   },
   async rewrites() {
-    const sb = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const sb = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(//+$/, "");
     // Same-origin relay for browser -> Supabase traffic (see lib/supabase/relay.ts).
     return sb ? [{ source: "/sb/:path*", destination: `${sb}/:path*` }] : [];
   },

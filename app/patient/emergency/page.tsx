@@ -1,3 +1,4 @@
+import { appUrl } from "@/lib/auth-utils";
 import { requireRole } from "@/lib/auth";
 import { supabaseAdmin, supabaseUser } from "@/lib/supabase/server";
 import { loadRecord } from "@/lib/data/record";
@@ -18,7 +19,7 @@ export default async function Emergency() {
     sb.from("access_logs").select("at,actor_label,ip,action").eq("patient_id", profile.id).in("action", ["emergency_scan", "break_glass"]).order("at", { ascending: false }).limit(8),
   ]);
   const token = grant?.token_enc ? decryptToken(grant.token_enc) : null;
-  const url = token ? `${process.env.NEXT_PUBLIC_APP_URL ?? ""}/e/${token}` : null;
+  const url = token ? `${appUrl()}/e/${token}` : null;
 
   return (
     <div className="space-y-10">

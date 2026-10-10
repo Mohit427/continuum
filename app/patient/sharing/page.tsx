@@ -1,3 +1,4 @@
+import { appUrl } from "@/lib/auth-utils";
 import Link from "next/link";
 import { Download, ScrollText } from "lucide-react";
 import { requireRole } from "@/lib/auth";
@@ -37,7 +38,7 @@ export default async function Sharing() {
   };
   const active = grants.filter(isActive);
   const ended = grants.filter((g) => !isActive(g)).slice(0, 12);
-  const base = process.env.NEXT_PUBLIC_APP_URL ?? "";
+  const base = appUrl();
 
   return (
     <div className="space-y-12">
