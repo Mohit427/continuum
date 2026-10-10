@@ -8,8 +8,8 @@ import { renderSeedPdf } from "./pdf";
 import { seedDocToExtraction } from "./build";
 import { DOCTORS, LABS_ACCOUNTS, PATIENTS, type SeedPatient } from "./stories";
 
-export const DEMO_DOMAIN = "demo.continuum.app";
-export const demoEmail = (account: string) => `${account}@${DEMO_DOMAIN}`;
+import { demoEmail } from "../demo";
+export { DEMO_DOMAIN, demoEmail } from "../demo";
 
 async function findUser(sb: SupabaseClient, email: string) {
   for (let page = 1; page < 20; page++) {

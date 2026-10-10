@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { supabaseAdmin, supabaseUser } from "@/lib/supabase/server";
 import { makeHealthId, type Role } from "@/lib/auth";
-import { demoEmail } from "@/lib/seed/run";
+import { demoEmail } from "@/lib/demo";
 
 export type FormState = { error?: string; ok?: string } | undefined;
 
