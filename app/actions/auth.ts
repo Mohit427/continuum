@@ -31,10 +31,16 @@ const DEMO = new Set(["lakshmi", "arjun", "dr.iyer", "dr.menon", "citycare"]);
 /** One-click demo login for judges: no setup, no typing. */
 export async function demoLogin(account: string) {
   if (!DEMO.has(account)) throw new Error("Unknown demo account");
-  const sb = await supabaseUser();
-  const { data, error } = await sb.auth.signInWithPassword({ email: demoEmail(account), password: process.env.DEMO_PASSWORD! });
-  if (error || !data.user) redirect("/login?error=demo");
-  redirect(HOME[await roleOf(data.user.id)]);
+  let target = "/login?error=demo";
+  try {
+    const sb = await supabaseUser();
+    const { data, error } = await sb.auth.signInWithPassword({ email: demoEmail(account), password: process.env.DEMO_PASSWORD! });
+    if (!error && data.user) target = HOME[await roleOf(data.user.id)];
+  } catch (e) {
+    console.error("demoLogin failed", e);
+    target = `/login?error=${encodeURIComponent((e instanceof Error ? `${e.name}: ${e.message}` : String(e)).slice(0, 160))}`;
+  }
+  redirect(target);
 }
 
 export async function logout() {
