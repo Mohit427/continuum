@@ -17,7 +17,7 @@ export function DemoReset() {
       className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-2 hover:text-brand disabled:opacity-60"
     >
       <RotateCcw size={14} className={s === "busy" ? "animate-spin" : undefined} />
-      {s === "busy" ? "Resetting demo (about 30 s)…" : s === "done" ? "Demo reset. Sign in again." : s === "idle" ? "Reset demo data" : s}
+      {s === "busy" ? "Resetting demo (about a minute)…" : s === "done" ? "Demo reset. Sign in again." : s === "idle" ? "Reset demo data" : s}
     </button>
   );
 }
