@@ -15,10 +15,5 @@ export async function GET() {
     const { error } = await admin.from("profiles").select("id", { head: true, count: "exact" });
     checks.service_key = error ? `error: ${error.message}` : "ok";
   } catch (e) { checks.service_key = `throws: ${e instanceof Error ? e.message : "?"}`; }
-  try {
-    const anon = createClient(url, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "", { auth: { persistSession: false } });
-    const { error } = await anon.auth.signInWithPassword({ email: "lakshmi@demo.continuum.app", password: process.env.DEMO_PASSWORD ?? "" });
-    checks.demo_login = error ? `error: ${error.message}` : "ok";
-  } catch (e) { checks.demo_login = `throws: ${e instanceof Error ? e.message : "?"}`; }
   return NextResponse.json({ env, checks }, { headers: { "Cache-Control": "no-store" } });
 }
