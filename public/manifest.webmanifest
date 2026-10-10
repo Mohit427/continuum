@@ -1,0 +1,10 @@
+{
+  "name": "Continuum",
+  "short_name": "Continuum",
+  "description": "Your care, one journey. Patient-held health record.",
+  "start_url": "/patient",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b3f8f",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

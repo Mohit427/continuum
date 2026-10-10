@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Continuum: Swiss pharmaceutical world (Geigy school).
+   A white grid, one cobalt action colour, a reserved signal for Blind Spots,
+   and a vivid code colour per therapeutic class, used as swatches and bars, never as text. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --color-canvas: #f4f6fa;
+  --color-raised: #ffffff;
+  --color-sunk: #eef1f6;
+  --color-ink: #0c1222;
+  --color-ink-2: #465066;
+  --color-ink-3: #5f697d;
+  --color-rule: #dce1ea;
+  --color-rule-soft: #ebeef4;
+  --color-rule-strong: #b7c0d0;
+
+  --color-brand: #1f4fff;
+  --color-brand-deep: #1238d6;
+  --color-brand-soft: #e9eeff;
+  --color-brand-line: #c3cfff;
+  --color-on-brand: #ffffff;
+
+  --color-flag: #d0174f;
+  --color-flag-deep: #a80f3e;
+  --color-flag-soft: #fdebf0;
+  --color-flag-line: #f5bccd;
+
+  --color-pend: #f5a524;
+  --color-pend-soft: #fff4de;
+  --color-pend-ink: #6f4300;
+
+  --color-ok: #0a7f46;
+  --color-ok-soft: #e3f6ec;
+  --color-ok-line: #a8dcc0;
+  --color-warn: #a34b00;
+  --color-warn-soft: #fff3e3;
+  --color-warn-line: #f2c48d;
+
+  /* Therapeutic class codes */
+  --color-c-heart: #ff4f2e;
+  --color-c-fluid: #00a5cf;
+  --color-c-meta: #7b3ff2;
+  --color-c-lung: #13a454;
+  --color-c-pain: #f59e0b;
+  --color-c-infect: #e8318c;
+  --color-c-other: #7d889b;
+
+  --font-sans: var(--font-grotesk), "Hanken Grotesk", var(--font-deva), var(--font-taml), system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.3125rem;
+  --text-2xl: 1.625rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+
+  --shadow-pop: 0 1px 2px rgb(12 18 34 / 0.06), 0 12px 32px -12px rgb(12 18 34 / 0.22);
+  --shadow-lift: 0 1px 2px rgb(12 18 34 / 0.05), 0 6px 18px -10px rgb(12 18 34 / 0.18);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark theme: the same world at night. Set by the inline theme script (system preference or the user's choice). */
+:root[data-theme="dark"] {
+  --color-canvas: #0a0e17;
+  --color-raised: #111725;
+  --color-sunk: #0d1320;
+  --color-ink: #e9edf5;
+  --color-ink-2: #aab3c5;
+  --color-ink-3: #8b95a9;
+  --color-rule: #252e40;
+  --color-rule-soft: #1a2232;
+  --color-rule-strong: #3a4558;
+
+  --color-brand: #7b96ff;
+  --color-brand-deep: #9cb0ff;
+  --color-brand-soft: #18214a;
+  --color-brand-line: #2f3d7a;
+  --color-on-brand: #070b16;
+
+  --color-flag: #ff5c8d;
+  --color-flag-deep: #ff86a9;
+  --color-flag-soft: #2c0f1b;
+  --color-flag-line: #5a1d33;
+
+  --color-pend: #f7b84a;
+  --color-pend-soft: #2c210b;
+  --color-pend-ink: #f9cf80;
+
+  --color-ok: #3fd68a;
+  --color-ok-soft: #0d2a1c;
+  --color-ok-line: #1d5a3b;
+  --color-warn: #ffb35c;
+  --color-warn-soft: #2d1d08;
+  --color-warn-line: #5e3d12;
+
+  --color-c-heart: #ff6a4d;
+  --color-c-fluid: #22c3ec;
+  --color-c-meta: #9a6bff;
+  --color-c-lung: #2fcf75;
+  --color-c-pain: #fbb431;
+  --color-c-infect: #ff5aa8;
+  --color-c-other: #8f9ab0;
+
+  --shadow-pop: 0 1px 2px rgb(0 0 0 / 0.4), 0 14px 36px -12px rgb(0 0 0 / 0.7);
+  --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.35), 0 8px 22px -10px rgb(0 0 0 / 0.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html { color-scheme: light; -webkit-text-size-adjust: 100%; }
+  html[data-theme="dark"] { color-scheme: dark; }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+    transition: background-color 0.25s var(--ease-out-expo), color 0.25s var(--ease-out-expo);
   }
+  h1, h2, h3 { text-wrap: balance; line-height: 1.18; letter-spacing: -0.022em; }
+  h1 { font-weight: 700; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-brand); color: var(--color-on-brand); }
+  :focus-visible { outline: 2.5px solid var(--color-brand); outline-offset: 2px; border-radius: 6px; }
+  a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  input, select, textarea { caret-color: var(--color-brand); accent-color: var(--color-brand); }
+  * { scrollbar-width: thin; scrollbar-color: var(--color-rule-strong) transparent; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: var(--color-rule-strong); border-radius: 8px; border: 2px solid var(--color-canvas); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Dense data table: quiet header, hairline rows, tabular figures */
+  .chart { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+  .chart th { text-align: left; font-weight: 600; font-size: var(--text-xs); color: var(--color-ink-3); padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--color-rule); white-space: nowrap; }
+  .chart td { padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--color-rule-soft); vertical-align: top; }
+  .chart tr:last-child td { border-bottom: 0; }
+  .chart tbody tr { transition: background-color 0.15s; }
+  .chart tbody tr:hover { background: color-mix(in srgb, var(--color-sunk) 70%, transparent); }
+
+  .field { display: block; width: 100%; border: 1px solid var(--color-rule); border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 1rem; background: var(--color-raised); color: var(--color-ink); min-height: 44px; transition: border-color 0.15s, box-shadow 0.15s; }
+  .field:hover { border-color: var(--color-rule-strong); }
+  .field:focus { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 28%, transparent); border-color: var(--color-brand); }
+  .field::placeholder { color: var(--color-ink-3); }
+  .field[aria-invalid="true"], .field.low { border-color: var(--color-warn); background: var(--color-warn-soft); }
+  .label { display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: 0.3rem; color: var(--color-ink); }
+
+  .line-pending { border-style: dashed !important; }
+  .line-ended { text-decoration: line-through; text-decoration-thickness: 1.5px; color: var(--color-ink-3); }
+
+  /* Therapeutic class swatch: the code square from the carton top */
+  .swatch { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 3px; flex-shrink: 0; }
+}
+
+/* Signature motion: a course bar grows from its start date, once. */
+@keyframes grow { from { transform: scaleX(0.001); } to { transform: none; } }
+.bar-grow { transform-origin: left center; animation: grow 0.9s var(--ease-out-expo) both; }
+@keyframes link-draw { from { stroke-dashoffset: var(--len, 600); } to { stroke-dashoffset: 0; } }
+.link-draw { stroke-dasharray: var(--len, 600); animation: link-draw 1s 0.45s var(--ease-out-expo) both; }
+@keyframes rise { from { opacity: 0.001; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.lit-row { animation: rise 0.5s var(--ease-out-expo) both; }
+@media (prefers-reduced-motion: reduce) {
+  .bar-grow, .link-draw, .lit-row { animation: none; stroke-dasharray: none; }
+  body { transition: none; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
 }

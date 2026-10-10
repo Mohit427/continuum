@@ -1,0 +1,710 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T11:48:17.873Z",
+  "title": "Design System: Continuum",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Cool Dispensary White",
+        "canonical": "#f4f6fa",
+        "tonalRamp": [
+          "#3d3e3f",
+          "#6e6f71",
+          "#9fa0a3",
+          "#cfd1d5",
+          "#f7f8fb",
+          "#fafbfd",
+          "#fcfcfe",
+          "#fefefe"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#404040",
+          "#737373",
+          "#a6a6a6",
+          "#d9d9d9",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      },
+      "sunk": {
+        "role": "neutral",
+        "displayName": "Tray Grey",
+        "canonical": "#eef1f6",
+        "tonalRamp": [
+          "#3c3c3e",
+          "#6b6c6f",
+          "#9b9da0",
+          "#cacdd1",
+          "#f2f5f8",
+          "#f7f8fb",
+          "#fafbfc",
+          "#fdfdfe"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Prescription Ink",
+        "canonical": "#0c1222",
+        "tonalRamp": [
+          "#030509",
+          "#05080f",
+          "#080c16",
+          "#0a0f1d",
+          "#494d59",
+          "#868991",
+          "#b6b8bd",
+          "#e2e3e4"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#465066",
+        "tonalRamp": [
+          "#12141a",
+          "#20242e",
+          "#2e3442",
+          "#3c4457",
+          "#747c8c",
+          "#a3a8b3",
+          "#c8cbd1",
+          "#e9eaed"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#5f697d",
+        "tonalRamp": [
+          "#181a1f",
+          "#2b2f38",
+          "#3e4451",
+          "#51596a",
+          "#878f9e",
+          "#afb4be",
+          "#cfd2d8",
+          "#ecedef"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#dce1ea",
+        "tonalRamp": [
+          "#37383b",
+          "#636569",
+          "#8f9298",
+          "#bbbfc7",
+          "#e5e9ef",
+          "#eef0f5",
+          "#f5f6f9",
+          "#fbfbfc"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Rule Soft",
+        "canonical": "#ebeef4",
+        "tonalRamp": [
+          "#3b3c3d",
+          "#6a6b6e",
+          "#999b9f",
+          "#c8cacf",
+          "#f0f2f7",
+          "#f5f7fa",
+          "#f9fafc",
+          "#fdfdfe"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "#b7c0d0",
+        "tonalRamp": [
+          "#2e3034",
+          "#52565e",
+          "#777d87",
+          "#9ca3b1",
+          "#c9d0dc",
+          "#dbe0e8",
+          "#e9ecf1",
+          "#f6f7f9"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Press Cobalt",
+        "canonical": "#1f4fff",
+        "tonalRamp": [
+          "#081440",
+          "#0e2473",
+          "#1433a6",
+          "#1a43d9",
+          "#577bff",
+          "#8fa7ff",
+          "#bccaff",
+          "#e4eaff"
+        ]
+      },
+      "brand-deep": {
+        "role": "primary",
+        "displayName": "Brand Deep",
+        "canonical": "#1238d6",
+        "tonalRamp": [
+          "#050e36",
+          "#081960",
+          "#0c248b",
+          "#0f30b6",
+          "#4d6ae0",
+          "#899ceb",
+          "#b8c3f3",
+          "#e3e7fa"
+        ]
+      },
+      "brand-soft": {
+        "role": "primary",
+        "displayName": "Brand Soft",
+        "canonical": "#e9eeff",
+        "tonalRamp": [
+          "#3a3c40",
+          "#696b73",
+          "#979ba6",
+          "#c6cad9",
+          "#eff2ff",
+          "#f4f7ff",
+          "#f8faff",
+          "#fcfdff"
+        ]
+      },
+      "brand-line": {
+        "role": "primary",
+        "displayName": "Brand Line",
+        "canonical": "#c3cfff",
+        "tonalRamp": [
+          "#313440",
+          "#585d73",
+          "#7f87a6",
+          "#a6b0d9",
+          "#d2dbff",
+          "#e1e7ff",
+          "#edf1ff",
+          "#f8f9ff"
+        ]
+      },
+      "on-brand": {
+        "role": "primary",
+        "displayName": "On Brand",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#404040",
+          "#737373",
+          "#a6a6a6",
+          "#d9d9d9",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      },
+      "flag": {
+        "role": "secondary",
+        "displayName": "Blind Spot Signal",
+        "canonical": "#d0174f",
+        "tonalRamp": [
+          "#340614",
+          "#5e0a24",
+          "#870f33",
+          "#b11443",
+          "#dc517b",
+          "#e88ba7",
+          "#f1b9ca",
+          "#f9e3ea"
+        ]
+      },
+      "flag-deep": {
+        "role": "secondary",
+        "displayName": "Flag Deep",
+        "canonical": "#a80f3e",
+        "tonalRamp": [
+          "#2a0410",
+          "#4c071c",
+          "#6d0a28",
+          "#8f0d35",
+          "#be4b6e",
+          "#d4879f",
+          "#e5b7c5",
+          "#f5e2e8"
+        ]
+      },
+      "flag-soft": {
+        "role": "secondary",
+        "displayName": "Flag Soft",
+        "canonical": "#fdebf0",
+        "tonalRamp": [
+          "#3f3b3c",
+          "#726a6c",
+          "#a4999c",
+          "#d7c8cc",
+          "#fef0f4",
+          "#fef5f8",
+          "#fef9fb",
+          "#fffdfd"
+        ]
+      },
+      "flag-line": {
+        "role": "secondary",
+        "displayName": "Flag Line",
+        "canonical": "#f5bccd",
+        "tonalRamp": [
+          "#3d2f33",
+          "#6e555c",
+          "#9f7a85",
+          "#d0a0ae",
+          "#f8cdda",
+          "#fadee6",
+          "#fcebf0",
+          "#fef7f9"
+        ]
+      },
+      "pend": {
+        "role": "status",
+        "displayName": "Pend",
+        "canonical": "#f5a524",
+        "tonalRamp": [
+          "#3d2909",
+          "#6e4a10",
+          "#9f6b17",
+          "#d08c1f",
+          "#f8bc5b",
+          "#fad292",
+          "#fce4bd",
+          "#fef4e5"
+        ]
+      },
+      "pend-soft": {
+        "role": "status",
+        "displayName": "Pend Soft",
+        "canonical": "#fff4de",
+        "tonalRamp": [
+          "#403d38",
+          "#736e64",
+          "#a69f90",
+          "#d9cfbd",
+          "#fff7e6",
+          "#fffaef",
+          "#fffcf5",
+          "#fffefb"
+        ]
+      },
+      "pend-ink": {
+        "role": "status",
+        "displayName": "Pend Ink",
+        "canonical": "#6f4300",
+        "tonalRamp": [
+          "#1c1100",
+          "#321e00",
+          "#482c00",
+          "#5e3900",
+          "#937240",
+          "#b7a180",
+          "#d4c7b3",
+          "#eee8e0"
+        ]
+      },
+      "ok": {
+        "role": "status",
+        "displayName": "Ok",
+        "canonical": "#0a7f46",
+        "tonalRamp": [
+          "#032012",
+          "#053920",
+          "#07532e",
+          "#096c3c",
+          "#479f74",
+          "#85bfa3",
+          "#b6d9c8",
+          "#e2f0e9"
+        ]
+      },
+      "ok-soft": {
+        "role": "status",
+        "displayName": "Ok Soft",
+        "canonical": "#e3f6ec",
+        "tonalRamp": [
+          "#393e3b",
+          "#666f6a",
+          "#94a099",
+          "#c1d1c9",
+          "#eaf8f1",
+          "#f1fbf6",
+          "#f7fcf9",
+          "#fcfefd"
+        ]
+      },
+      "ok-line": {
+        "role": "status",
+        "displayName": "Ok Line",
+        "canonical": "#a8dcc0",
+        "tonalRamp": [
+          "#2a3730",
+          "#4c6356",
+          "#6d8f7d",
+          "#8fbba3",
+          "#bee5d0",
+          "#d4eee0",
+          "#e5f5ec",
+          "#f5fbf7"
+        ]
+      },
+      "warn": {
+        "role": "status",
+        "displayName": "Warn",
+        "canonical": "#a34b00",
+        "tonalRamp": [
+          "#291300",
+          "#492200",
+          "#6a3100",
+          "#8b4000",
+          "#ba7840",
+          "#d1a580",
+          "#e3c9b3",
+          "#f4e9e0"
+        ]
+      },
+      "warn-soft": {
+        "role": "status",
+        "displayName": "Warn Soft",
+        "canonical": "#fff3e3",
+        "tonalRamp": [
+          "#403d39",
+          "#736d66",
+          "#a69e94",
+          "#d9cfc1",
+          "#fff6ea",
+          "#fff9f1",
+          "#fffbf7",
+          "#fffefc"
+        ]
+      },
+      "warn-line": {
+        "role": "status",
+        "displayName": "Warn Line",
+        "canonical": "#f2c48d",
+        "tonalRamp": [
+          "#3d3123",
+          "#6d583f",
+          "#9d7f5c",
+          "#cea778",
+          "#f5d3aa",
+          "#f9e2c6",
+          "#fbeddd",
+          "#fdf8f1"
+        ]
+      },
+      "c-heart": {
+        "role": "tertiary",
+        "displayName": "Cardio Vermilion",
+        "canonical": "#ff4f2e",
+        "tonalRamp": [
+          "#40140c",
+          "#732415",
+          "#a6331e",
+          "#d94327",
+          "#ff7b62",
+          "#ffa797",
+          "#ffcac0",
+          "#ffeae6"
+        ]
+      },
+      "c-fluid": {
+        "role": "tertiary",
+        "displayName": "Renal Cyan",
+        "canonical": "#00a5cf",
+        "tonalRamp": [
+          "#002934",
+          "#004a5d",
+          "#006b87",
+          "#008cb0",
+          "#40bcdb",
+          "#80d2e7",
+          "#b3e4f1",
+          "#e0f4f9"
+        ]
+      },
+      "c-meta": {
+        "role": "tertiary",
+        "displayName": "Endocrine Violet",
+        "canonical": "#7b3ff2",
+        "tonalRamp": [
+          "#1f103d",
+          "#371c6d",
+          "#50299d",
+          "#6936ce",
+          "#9c6ff5",
+          "#bd9ff9",
+          "#d7c5fb",
+          "#efe8fd"
+        ]
+      },
+      "c-lung": {
+        "role": "tertiary",
+        "displayName": "Respiratory Green",
+        "canonical": "#13a454",
+        "tonalRamp": [
+          "#052915",
+          "#094a26",
+          "#0c6b37",
+          "#108b47",
+          "#4ebb7f",
+          "#89d2aa",
+          "#b8e4cc",
+          "#e3f4ea"
+        ]
+      },
+      "c-pain": {
+        "role": "tertiary",
+        "displayName": "Analgesic Amber",
+        "canonical": "#f59e0b",
+        "tonalRamp": [
+          "#3d2803",
+          "#6e4705",
+          "#9f6707",
+          "#d08609",
+          "#f8b648",
+          "#facf85",
+          "#fce2b6",
+          "#fef3e2"
+        ]
+      },
+      "c-infect": {
+        "role": "tertiary",
+        "displayName": "Anti-infective Pink",
+        "canonical": "#e8318c",
+        "tonalRamp": [
+          "#3a0c23",
+          "#68163f",
+          "#97205b",
+          "#c52a77",
+          "#ee65a9",
+          "#f498c6",
+          "#f8c1dd",
+          "#fce6f1"
+        ]
+      },
+      "c-other": {
+        "role": "tertiary",
+        "displayName": "Unclassed Slate",
+        "canonical": "#7d889b",
+        "tonalRamp": [
+          "#1f2227",
+          "#383d46",
+          "#515865",
+          "#6a7484",
+          "#9ea6b4",
+          "#bec4cd",
+          "#d8dbe1",
+          "#eff1f3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Landing headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles (patient name, My patients)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section and card headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, tables, forms; tabular numerals."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 1px 2px rgb(12 18 34 / 0.05), 0 6px 18px -10px rgb(12 18 34 / 0.18)",
+        "purpose": "A hovered or focused Blind Spot card."
+      },
+      {
+        "name": "pop",
+        "value": "0 1px 2px rgb(12 18 34 / 0.06), 0 12px 32px -12px rgb(12 18 34 / 0.22)",
+        "purpose": "Floating layers: notifications menu, emergency card."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All entrances and state changes."
+      },
+      {
+        "name": "bar-grow",
+        "value": "scaleX 0 to 1, 0.9s ease-out-expo, staggered 40ms",
+        "purpose": "Course bars grow from their start date once on load."
+      },
+      {
+        "name": "link-draw",
+        "value": "stroke-dashoffset, 1s, 0.45s delay",
+        "purpose": "Blind Spot connectors draw after the bars."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one cobalt action per view (Add a record, Request access).",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M12 18v-6\"/><path d=\"m9 15 3-3 3 3\"/></svg>Add a record</button>",
+      "css": ".ds-btn-primary { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 16px; border:0; border-radius:10px; background:var(--color-brand,#1f4fff); color:var(--color-on-brand,#fff); font-weight:600; font-size:0.97rem; box-shadow:0 1px 2px rgb(12 18 34/0.12); cursor:pointer; transition:background-color .15s, transform .15s; } .ds-btn-primary:hover { background:var(--color-brand-deep,#1238d6); } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:focus-visible { outline:2.5px solid var(--color-brand,#1f4fff); outline-offset:2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Neutral actions beside the primary (Emergency card, Mark as seen).",
+      "html": "<button class=\"ds-btn-secondary\">Emergency card</button>",
+      "css": ".ds-btn-secondary { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); min-height:44px; padding:0 16px; border-radius:10px; border:1px solid var(--color-rule,#dce1ea); background:var(--color-raised,#fff); color:var(--color-ink,#0c1222); font-weight:600; font-size:0.97rem; cursor:pointer; transition:background-color .15s,border-color .15s; } .ds-btn-secondary:hover { background:var(--color-sunk,#eef1f6); border-color:var(--color-rule-strong,#b7c0d0); } .ds-btn-secondary:focus-visible { outline:2.5px solid var(--color-brand,#1f4fff); outline-offset:2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "44px field, cobalt focus ring, amber tint for low-confidence AI values.",
+      "html": "<input class=\"ds-field\" placeholder=\"CN-XXXX-XXXX\" />",
+      "css": ".ds-field { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); width:260px; min-height:44px; padding:0.6rem 0.8rem; border:1px solid var(--color-rule,#dce1ea); border-radius:10px; background:var(--color-raised,#fff); color:var(--color-ink,#0c1222); font-size:1rem; transition:border-color .15s, box-shadow .15s; } .ds-field:hover { border-color:var(--color-rule-strong,#b7c0d0); } .ds-field:focus { outline:none; border-color:var(--color-brand,#1f4fff); box-shadow:0 0 0 3px rgb(31 79 255/0.28); }"
+    },
+    {
+      "name": "Nav Tabs",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Top-bar pill tabs; the current page sits on a cobalt tint.",
+      "html": "<nav class=\"ds-nav\"><a class=\"on\" href=\"#\">Overview</a><a href=\"#\">Records</a><a href=\"#\">Timeline</a><a href=\"#\">Sharing</a></nav>",
+      "css": ".ds-nav { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); display:flex; gap:4px; } .ds-nav a { height:36px; display:flex; align-items:center; padding:0 14px; border-radius:999px; color:var(--color-ink-2,#465066); text-decoration:none; font-size:0.95rem; transition:background-color .15s,color .15s; } .ds-nav a:hover { background:var(--color-sunk,#eef1f6); color:var(--color-ink,#0c1222); } .ds-nav a.on { background:var(--color-brand-soft,#e9eeff); color:var(--color-brand,#1f4fff); font-weight:600; } .ds-nav a:focus-visible { outline:2.5px solid var(--color-brand,#1f4fff); outline-offset:2px; }"
+    },
+    {
+      "name": "Status Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Sentence-case status pills; pending adds a dashed outline.",
+      "html": "<span class=\"ds-chip flag\">Review soon</span> <span class=\"ds-chip warn\">Worth reviewing</span> <span class=\"ds-chip ok pending\">Seen</span>",
+      "css": ".ds-chip { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); display:inline-flex; align-items:center; border-radius:999px; border:1px solid transparent; padding:2px 10px; font-size:0.8125rem; font-weight:600; } .ds-chip.flag { background:var(--color-flag-soft,#fdebf0); color:var(--color-flag,#d0174f); } .ds-chip.warn { background:var(--color-warn-soft,#fff3e3); color:var(--color-warn,#a34b00); } .ds-chip.ok { background:var(--color-ok-soft,#e3f6ec); color:var(--color-ok,#0a7f46); } .ds-chip.pending { border-style:dashed; border-color:currentColor; }"
+    },
+    {
+      "name": "Medication Map Row",
+      "kind": "custom",
+      "refersTo": "care-map",
+      "description": "Signature: a course bar in its class code, length equals exact duration; a Blind Spot connector ends on a filled signal dot.",
+      "html": "<div class=\"ds-map\"><div class=\"lbl\"><i style=\"background:var(--color-c-heart,#ff4f2e)\"></i><b>Amlong</b><small>10 mg · Dr. Anand Iyer</small></div><div class=\"trk\"><span class=\"bar\" style=\"left:8%;width:88%;background:var(--color-c-heart,#ff4f2e)\"></span><span class=\"dot\" style=\"left:8%\"></span><span class=\"today\"></span></div><div class=\"lbl\"><i style=\"background:var(--color-c-fluid,#00a5cf)\"></i><b>Lasix</b><small>40 mg · Dr. Rahul Menon</small></div><div class=\"trk\"><span class=\"bar\" style=\"left:52%;width:44%;background:var(--color-c-fluid,#00a5cf)\"></span><span class=\"dot end\" style=\"left:52%\"></span><span class=\"today\"></span></div></div>",
+      "css": ".ds-map { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); display:grid; grid-template-columns:180px 360px; border:1px solid var(--color-rule,#dce1ea); border-radius:16px; background:var(--color-raised,#fff); overflow:hidden; } .ds-map .lbl { display:grid; grid-template-columns:12px 1fr; column-gap:8px; align-items:center; height:42px; padding:0 16px; border-right:1px solid var(--color-rule-soft,#ebeef4); } .ds-map .lbl i { width:11px; height:11px; border-radius:3px; grid-row:span 2; } .ds-map .lbl b { font-size:0.875rem; color:var(--color-ink,#0c1222); } .ds-map .lbl small { font-size:0.75rem; color:var(--color-ink-3,#5f697d); } .ds-map .trk { position:relative; height:42px; } .ds-map .bar { position:absolute; top:50%; height:14px; transform:translateY(-50%); border-radius:4px 999px 999px 4px; } .ds-map .dot { position:absolute; top:50%; width:12px; height:12px; transform:translate(-50%,-50%); border-radius:999px; border:2px solid var(--color-flag,#d0174f); background:var(--color-raised,#fff); } .ds-map .dot.end { background:var(--color-flag,#d0174f); } .ds-map .today { position:absolute; top:0; bottom:0; left:96%; width:1px; background:rgb(12 18 34/0.5); }"
+    },
+    {
+      "name": "Blind Spot Card",
+      "kind": "card",
+      "refersTo": "blind-spot-card",
+      "description": "Numbered to its connector; heading first, evidence chain with class swatches and source links.",
+      "html": "<article class=\"ds-spot\"><div class=\"top\"><span class=\"n\">2</span><span class=\"sev\">Review soon</span></div><h3>Possible prescribing cascade: Amlodipine → ankle swelling → Furosemide</h3><p class=\"type\">Prescribing cascade <em>· across 2 doctors</em></p><ul><li><i style=\"background:var(--color-c-heart,#ff4f2e)\"></i>Amlodipine 10 mg started · 5 Sept 2025</li><li><i style=\"background:var(--color-c-fluid,#00a5cf)\"></i>Furosemide started · 2 Feb 2026</li></ul></article>",
+      "css": ".ds-spot { font-family: var(--font-sans, 'Hanken Grotesk', system-ui, sans-serif); width:340px; padding:20px; border:1px solid var(--color-rule,#dce1ea); border-radius:16px; background:var(--color-raised,#fff); color:var(--color-ink,#0c1222); transition:border-color .2s, box-shadow .2s; } .ds-spot:hover { border-color:var(--color-flag,#d0174f); box-shadow:0 1px 2px rgb(12 18 34/0.05),0 6px 18px -10px rgb(12 18 34/0.18); } .ds-spot .top { display:flex; gap:8px; align-items:center; margin-bottom:12px; } .ds-spot .n { display:grid; place-items:center; min-width:24px; height:24px; border-radius:999px; background:var(--color-flag,#d0174f); color:#fff; font-size:0.75rem; font-weight:700; } .ds-spot .sev { border-radius:999px; padding:2px 10px; background:var(--color-flag-soft,#fdebf0); color:var(--color-flag,#d0174f); font-size:0.8125rem; font-weight:600; } .ds-spot h3 { margin:0; font-size:1.06rem; line-height:1.35; letter-spacing:-0.015em; } .ds-spot .type { margin:4px 0 0; font-size:0.875rem; color:var(--color-ink-2,#465066); } .ds-spot .type em { font-style:normal; font-weight:600; color:var(--color-flag,#d0174f); } .ds-spot ul { margin:12px 0 0; padding:12px 0 0; list-style:none; border-top:1px solid var(--color-rule-soft,#ebeef4); font-size:0.875rem; } .ds-spot li { display:flex; gap:10px; align-items:center; padding:3px 0; } .ds-spot li i { width:11px; height:11px; border-radius:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dispensary Grid",
+    "overview": "Continuum is drawn the way mid-century Swiss pharmaceutical houses drew their cartons: a cool white grid, one disciplined action colour, and a vivid code colour for each therapeutic class. A patient's whole regimen becomes a set of coloured bars on a shared time axis, so what they take, what it is for, and where two doctors' medicines collide all read in one pass. The world is calm and clinical without being sterile: near-black ink on cool paper, hairline rules instead of boxes-within-boxes, generous 44px targets for older hands.\n\nDensity is deliberately split. Patient surfaces breathe (16px body, 1.55 leading, plain-language labels), while the clinician console and tables tighten to 15px rows with tabular figures. Both share the same tokens; the difference is spacing and how much is shown, never a different palette. Dark mode is the same world at night: every token is redefined under `[data-theme=\"dark\"]`, code colours brighten to hold their vibrancy on near-black, and nothing is inverted by filter.\n\nConfirmed rejections: the teal white-card health dashboard, and any transit or railway metaphor (a previous direction read as transport, not medicine).",
+    "keyCharacteristics": [
+      "Cool white canvas, white raised panels on 1px rules, near-black cobalt-tinted ink.",
+      "Cobalt is the only action colour; magenta-red is reserved for Blind Spots and emergencies.",
+      "Seven therapeutic code colours appear only as solid swatches, bars and marks.",
+      "One grotesque family (Hanken Grotesk) with Devanagari and Tamil companions, tabular numerals everywhere.",
+      "Flat at rest; two soft shadows for things that float or are lit.",
+      "Length carries data: a course bar's width is its exact duration."
+    ],
+    "rules": [
+      {
+        "name": "The Press-Only Cobalt Rule",
+        "body": "Cobalt appears only where something can be pressed or is currently selected. Headings, illustrations and decorative accents never use it; the one exception is a small brand-tinted icon beside a protective statement.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reserved Signal Rule",
+        "body": "Magenta-red means \"a Blind Spot or an emergency fact\". It never decorates, never marks an ordinary error (that is `warn`), and never appears as a class code.",
+        "section": "colors"
+      },
+      {
+        "name": "The Swatch Not Text Rule",
+        "body": "Therapeutic code colours are applied as solid fills (swatches, course bars, the logo mark, landing step rules), never as text colour. Every swatch sits next to a text label so colour is never the only carrier.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mirrored Night Rule",
+        "body": "Every token has a hand-tuned dark value; new tokens must ship both or they do not ship.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Body Rule",
+        "body": "`font-variant-numeric: tabular-nums` is set on the body and inherited everywhere. Never switch it off for numbers that sit in columns or change live.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bold-Not-Big Rule",
+        "body": "The scale is short (0.8125 to 2rem in-app). Hierarchy comes from weight (400/600/700) and ink step (`ink` / `ink-2` / `ink-3`) before size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lit-Not-Lifted Rule",
+        "body": "Panels sit flat on their hairline at rest. Elevation is a response to state (floating, hovered, focused), not a default card style.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** colour every medicine by its therapeutic group through `lib/kb/groups.ts` and the `c-*` tokens, always as a swatch or bar beside a text label.",
+      "**Do** keep cobalt to pressable or selected elements: primary buttons, active tabs, links, focus rings.",
+      "**Do** keep magenta-red for Blind Spots, emergency facts, unread badges and destructive actions.",
+      "**Do** make bar length equal exact duration; an ongoing course ends at today with a rounded right end.",
+      "**Do** carry state in line form as well as hue: dashed for pending or acknowledged, struck through for ended or dismissed.",
+      "**Do** define a dark value for every new token under `[data-theme=\"dark\"]`.",
+      "**Do** keep primary controls and fields at 44px minimum and body text at 16px.",
+      "**Do** wrap every entrance animation in the reduced-motion guard."
+    ],
+    "donts": [
+      "**Don't** set text in a therapeutic code colour.",
+      "**Don't** use cobalt or magenta-red decoratively (headings, illustrations, backgrounds of non-interactive blocks).",
+      "**Don't** build the teal white-card health dashboard, or any transit, railway or route-map metaphor.",
+      "**Don't** add shadows to panels at rest; use the hairline and surface ladder.",
+      "**Don't** introduce a second typeface; scripts other than Latin use the Noto companions.",
+      "**Don't** use uppercase tracked labels or eyebrow lines above headings.",
+      "**Don't** let colour be the only signal on the map; every class has a label and every flag has a number."
+    ]
+  }
+}

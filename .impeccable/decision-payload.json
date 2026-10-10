@@ -1,0 +1,130 @@
+{
+  "title": "Choose Continuum's visual world",
+  "question": "The roll assigned the Bahi-Khata ledger; the dealt Boarding-pass & gate-board challenger beat it on both axes. Keep the roll, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Bahi-Khata",
+      "kicker": "THE ROLL",
+      "lineage": "the red-cloth bahi-khata account book every Indian family and shop keeps",
+      "thesis": "Your health kept like a family ledger: every entry sourced, every account reconciled.",
+      "palette": ["#8e1b1f", "#f4f6f8", "#1d2733", "#d99a1e", "#2f6fb0"],
+      "materials": ["red bound-cloth shell rail", "turmeric thread stitch line", "double rule closing a reconciled entry"],
+      "viewport": "Red cloth rail left; dashboard of Blind Spots set as reconciliations: two doctors' entries side by side, the unreconciled line between them, closed with a double rule when acknowledged.",
+      "risk": "Ledger reads as accounting before medicine; clinicians may not feel it is a clinical tool.",
+      "raised": [
+        { "from": "challenger-emission-rail", "raise": "Consent state carried by line form, not only hue: solid active, dashed pending, struck revoked." },
+        { "from": "challenger-orienteering", "raise": "One ink reserved exclusively for cross-doctor connections; nothing else may use it." },
+        { "from": "challenger-acetate-tabs", "raise": "Each record section owns one fixed hue used on its tab and its rows everywhere." }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "challenger-gate-board",
+      "label": "Boarding Pass & Gate Board",
+      "verdict": "wins",
+      "lineage": "airline/railway boarding passes and live departure boards",
+      "thesis": "Your care as a live board that re-ranks itself, and an emergency card you carry like a boarding pass.",
+      "palette": ["#121821", "#f7f8fa", "#ffb21a", "#e5484d", "#2bb3a3"],
+      "materials": ["split-flap board rows", "segmented pass with tear stubs", "scannable QR block"],
+      "viewport": "Light shell with a charcoal 'board' of Blind Spots and medicines ranked by urgency; a changed row re-ranks in place and stays lit amber until acknowledged; the emergency pass docks right.",
+      "case": "Fuses cleanly: alerts map to board rows, the emergency card is literally a pass; patients and doctors both read it instantly.",
+      "risk": "Travel metaphor can feel playful for illness if the board animates too much.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-boarding-pass-and-gate-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/vernacular-ephemera-boarding-pass-and-gate-board.webp",
+      "html": ".impeccable/mocks/decision/challenger-gate-board.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "Reservation Chart",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Indian Railways reservation charts and route maps",
+      "thesis": "Care as a journey across stations: every doctor and lab a stop, Blind Spots the stops that never saw each other.",
+      "palette": ["#1b3f8f", "#ffffff", "#7a1f2b", "#f2b8a8", "#0f172a"],
+      "materials": ["route line with station ticks", "pink chit tickets", "chart-style dense tables"],
+      "viewport": "Navy shell; a horizontal care route Chennai → Bengaluru with each provider a station; Blind Spot cards hang from the two stations they connect.",
+      "risk": "Familiar: transit-map metaphors are where many data products land.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-mono-product",
+      "label": "Monochrome Product",
+      "verdict": "competitive",
+      "lineage": "neutral-scale software product surfaces",
+      "thesis": "Near-black on near-white, one accent, every claim next to its proof.",
+      "palette": ["#fafafa", "#111111", "#6b7280", "#0e7c66"],
+      "materials": ["fine neutral scale", "hairline borders"],
+      "viewport": "Clean dashboard; alerts as neutral cards with one teal accent; proof (source document) beside each.",
+      "case": "Holds clarity, loses audience identification: it could be any SaaS.",
+      "risk": "Indistinguishable from other hackathon dashboards.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing-hero.webp",
+      "html": ".impeccable/mocks/decision/challenger-mono-product.html"
+    },
+    {
+      "id": "challenger-emission-rail",
+      "label": "Emission-Line Rail",
+      "verdict": "declined",
+      "lineage": "glass spectrograms",
+      "thesis": "Hairline spectral lines on charcoal; state as line form.",
+      "palette": ["#22252a", "#e9e4d8", "#f2c94c"],
+      "materials": ["charcoal continuum", "1px emission lines"],
+      "viewport": "Everything hangs off one off-centre rail.",
+      "case": "Fuses poorly: older patients cannot read hairline state.",
+      "kept": "State as line form (solid / dashed / struck) for consent grants.",
+      "risk": "Illegible for the audience.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-emission-line-rail-hero.webp"
+    },
+    {
+      "id": "challenger-orienteering",
+      "label": "Orienteering Map",
+      "verdict": "declined",
+      "lineage": "ISOM orienteering maps",
+      "thesis": "Terrain beneath, your course in reserved purple above.",
+      "palette": ["#ffffff", "#7a3e9d", "#a0622d", "#3b82c4"],
+      "materials": ["contour texture", "control circles"],
+      "viewport": "Care course over a terrain of records.",
+      "case": "Fuses poorly: unfamiliar to Indian patients and doctors.",
+      "kept": "One ink reserved for cross-doctor connections only.",
+      "risk": "Foreign metaphor.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-orienteering-map-hero.webp"
+    },
+    {
+      "id": "challenger-acetate-tabs",
+      "label": "Acetate Tab Manual",
+      "verdict": "declined",
+      "lineage": "boxed-software manuals",
+      "thesis": "Tabbed divider boards with acetate leaves.",
+      "palette": ["#e8742c", "#f2c230", "#2c7a4b", "#2d4fa3"],
+      "materials": ["divider board", "acetate leaf"],
+      "viewport": "Fore-edge tab rail by section.",
+      "case": "Fuses poorly: manual metaphor adds no clinical meaning.",
+      "kept": "One fixed hue per record section, used everywhere.",
+      "risk": "Retro costume.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp"
+    },
+    {
+      "id": "challenger-vertical-feed",
+      "label": "Vertical Feed",
+      "verdict": "declined",
+      "lineage": "short-video apps",
+      "thesis": "One item fills the screen; snap to the next.",
+      "palette": ["#000000", "#ffffff"],
+      "materials": ["full-bleed media", "right action rail"],
+      "viewport": "One record per screen.",
+      "case": "Fuses poorly: records need comparison, not one-at-a-time.",
+      "kept": "Next item pre-loaded: instant navigation between records.",
+      "risk": "Wrong for dense clinical reading."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "Health-record SaaS at full craft: white cards, teal-blue accent, clean sidebar.",
+    "palette": ["#ffffff", "#0f172a", "#0ea5e9"],
+    "materials": ["clean grid", "rounded cards"],
+    "viewport": "Sidebar, stat tiles, alert list, medicine table.",
+    "risk": "Indistinguishable from the competition by design."
+  },
+  "steer": true
+}
