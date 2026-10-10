@@ -2,7 +2,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ArrowRight, Camera, FileJson, FlaskConical, KeyRound, ListChecks, QrCode, ScanSearch, ShieldCheck, Sparkles, Stethoscope, UserRound } from "lucide-react";
 import { getSession } from "@/lib/auth";
-import { demoLogin } from "@/app/actions/auth";
 import { CASCADES, DRUG_LAB, INTERACTIONS } from "@/lib/kb/rules";
 import { DRUGS } from "@/lib/kb/drugs";
 import { ThemeToggle } from "@/components/shell/ThemeToggle";
@@ -23,7 +22,8 @@ const FEATURES = [
 
 function DemoButton({ account, icon, title }: { account: string; icon: React.ReactNode; title: string }) {
   return (
-    <form action={demoLogin.bind(null, account)}>
+    <form method="post" action="/auth/demo">
+      <input type="hidden" name="account" value={account} />
       <button className="inline-flex items-center gap-2 h-10 px-3.5 rounded-full border border-rule bg-raised text-sm font-semibold hover:border-rule-strong hover:bg-sunk transition-colors">
         <span className="text-brand">{icon}</span>{title}
       </button>

@@ -1,6 +1,6 @@
 "use client";
-import { useActionState, useState } from "react";
-import { signup, type FormState } from "@/app/actions/auth";
+import { useState } from "react";
+import { submitAuth } from "@/components/authSubmit";
 import { Button, cn, Field } from "@/components/ui";
 
 const ROLES = [
@@ -11,9 +11,21 @@ const ROLES = [
 
 export function SignupForm({ initialRole }: { initialRole: "patient" | "doctor" | "lab" }) {
   const [role, setRole] = useState(initialRole);
-  const [state, action, pending] = useActionState<FormState, FormData>(signup, undefined);
+  const [error, setError] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
   return (
-    <form action={action} className="mt-6 space-y-5">
+    <form
+      method="post"
+      action="/auth/signup"
+      onSubmit={async (e) => {
+        e.preventDefault();
+        setPending(true);
+        setError(null);
+        const err = await submitAuth("signup", e.currentTarget);
+        if (err) { setError(err); setPending(false); }
+      }}
+      className="mt-6 space-y-5"
+    >
       <fieldset>
         <legend className="label">Who are you?</legend>
         <div className="grid gap-2 sm:grid-cols-3">
@@ -52,7 +64,7 @@ export function SignupForm({ initialRole }: { initialRole: "patient" | "doctor" 
         )}
       </div>
       {role !== "patient" && <p className="text-sm text-ink-2">Registration numbers are shown to patients with every request. In this prototype they are not verified against the council registry.</p>}
-      {state?.error && <p role="alert" className="font-semibold text-flag">{state.error}</p>}
+      {error && <p role="alert" className="font-semibold text-flag">{error}</p>}
       <Button type="submit" size="lg" disabled={pending}>{pending ? "Creating…" : "Create account"}</Button>
     </form>
   );
