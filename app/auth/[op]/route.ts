@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { z } from "zod";
+import { createClient } from "@supabase/supabase-js";
 import { supabaseAdmin, supabaseUser } from "@/lib/supabase/server";
+import { SLOT_COOKIE } from "@/lib/supabase/slot";
 import { makeHealthId, type Role } from "@/lib/auth";
 import { demoEmail } from "@/lib/demo";
 
@@ -16,6 +19,22 @@ const DEMO = new Set(["lakshmi", "arjun", "dr.iyer", "dr.menon", "citycare"]);
 async function roleOf(userId: string): Promise<Role> {
   const { data } = await supabaseAdmin().from("profiles").select("role").eq("id", userId).single();
   return (data?.role ?? "patient") as Role;
+}
+
+/**
+ * Sign in without touching any existing session, then store the new session in the cookie of the
+ * account's role slot. A doctor signing in therefore never signs out the patient in another tab.
+ */
+async function signIn(email: string, password: string): Promise<Role | null> {
+  const tmp = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, { auth: { persistSession: false, autoRefreshToken: false } });
+  const { data, error } = await tmp.auth.signInWithPassword({ email, password });
+  if (error || !data.session) return null;
+  const role = await roleOf(data.session.user.id);
+  const sb = await supabaseUser(role);
+  const { error: setErr } = await sb.auth.setSession({ access_token: data.session.access_token, refresh_token: data.session.refresh_token });
+  if (setErr) return null;
+  (await cookies()).set(SLOT_COOKIE, role, { path: "/", sameSite: "lax", maxAge: 60 * 60 * 24 * 30 });
+  return role;
 }
 
 const Base = z.object({
@@ -54,9 +73,8 @@ export async function POST(req: Request, ctx: RouteContext<"/auth/[op]">) {
     const account = String(form.get("account") ?? "");
     let to = "/login?error=demo";
     if (DEMO.has(account)) {
-      const sb = await supabaseUser();
-      const { data, error } = await sb.auth.signInWithPassword({ email: demoEmail(account), password: process.env.DEMO_PASSWORD ?? "" });
-      if (!error && data.user) to = HOME[await roleOf(data.user.id)];
+      const role = await signIn(demoEmail(account), process.env.DEMO_PASSWORD ?? "");
+      if (role) to = HOME[role];
     }
     return NextResponse.redirect(new URL(to, req.url), 303);
   }
@@ -66,10 +84,8 @@ export async function POST(req: Request, ctx: RouteContext<"/auth/[op]">) {
     const password = String(form.get("password") ?? "");
     const next = String(form.get("next") ?? "");
     if (!email || !password) return json({ error: "Enter your email and password." });
-    const sb = await supabaseUser();
-    const { data, error } = await sb.auth.signInWithPassword({ email, password });
-    if (error || !data.user) return json({ error: "Email or password is incorrect." });
-    const role = await roleOf(data.user.id);
+    const role = await signIn(email, password);
+    if (!role) return json({ error: "Email or password is incorrect." });
     return json({ to: next.startsWith(HOME[role]) ? next : HOME[role] });
   }
 
@@ -101,8 +117,7 @@ export async function POST(req: Request, ctx: RouteContext<"/auth/[op]">) {
     if (role === "patient") {
       await admin.from("notifications").insert({ user_id: created.user.id, type: "welcome", title: "Welcome to Continuum", body: "Start by uploading a prescription or lab report.", link: "/patient/records" });
     }
-    const sb = await supabaseUser();
-    await sb.auth.signInWithPassword({ email, password });
+    await signIn(email, password);
     return json({ to: HOME[role] });
   }
 

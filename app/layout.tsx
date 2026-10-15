@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Hanken_Grotesk, Noto_Sans_Devanagari, Noto_Sans_Tamil } from "next/font/google";
 import { Toaster } from "sonner";
 import { THEME_SCRIPT } from "@/components/shell/ThemeToggle";
+import { SLOT_SCRIPT } from "@/lib/supabase/slot";
 import "./globals.css";
 
 const grotesk = Hanken_Grotesk({ variable: "--font-grotesk", subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], display: "swap" });
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${grotesk.variable} ${deva.variable} ${taml.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: SLOT_SCRIPT }} />
       </head>
       <body className="min-h-full flex flex-col">
         {children}
